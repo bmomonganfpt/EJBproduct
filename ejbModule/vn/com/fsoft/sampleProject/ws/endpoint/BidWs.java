@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
+import javax.jws.WebParam;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 import javax.jws.soap.SOAPBinding.Style;
@@ -30,7 +31,7 @@ public class BidWs implements BidWsRemote {
 	}
 
 	@Override
-	public List<Bid> getBidding(Account account) {
+	public List<Bid> getBidding(@WebParam(name="Account") Account account) {
 		// TODO Auto-generated method stub
 		return null;
 	}
